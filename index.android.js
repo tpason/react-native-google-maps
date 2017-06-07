@@ -10,12 +10,28 @@ import {
   StyleSheet,
   Text,
   Dimensions,
+  TouchableOpacity,
   Image,
   View,
 } from 'react-native';
 var {width} = Dimensions.get('window');
 import MapView, { Marker } from 'react-native-maps';
-import * as Animatable from 'react-native-animatable';
+// import * as Animatable from 'react-native-animatable';
+
+class LocationButton extends Component {
+  render() {
+    return (
+      <TouchableOpacity style={styles.button} onPress={() => (
+        this.props.moveMaptoLocation(this.props.marker.latLng)
+      )}>
+        <Text style={styles.animatedText}>
+          {this.props.marker.title}
+        </Text>
+        {/*<Animatable.Text animation="pulse" easing="ease-out" iterationCount="infinite" style={{ textAlign: 'center', fontSize: 15, color: '#FF0' }}>❤❤❤❤</Animatable.Text>*/}
+      </TouchableOpacity>
+    )
+  }
+}
 
 export default class ReactMaps extends Component {
   constructor(props) {
@@ -46,19 +62,43 @@ export default class ReactMaps extends Component {
         latitudeDelta: 0.0122,
         longitudeDelta: 0.0121,
       },
+      x: '',
     };
     this.onRegionChange = this.onRegionChange.bind(this);
+    this.moveMaptoLocation = this.moveMaptoLocation.bind(this);
   }
   onRegionChange(region) {
     this.setState({region})
   }
+  moveMaptoLocation(latLng) {
+    // this.refs.map.animateToCoordinate({
+    this.refs.map.animateToRegion({
+      latitudeDelta: 0.002,
+      longitudeDelta: 0.002,
+      ...latLng,
+    }, 2000);
+    // this.setState({
+    //   region: {
+    //     latitudeDelta: 0.002,
+    //     longitudeDelta: 0.002,
+    //     ...latLng,
+    //   }
+    // })
+}
+
   render() {
     let coordinates = this.state.markers.map(marker => marker.latLng);
     return (
       <View
         style={styles.container}>
+        {this.state.markers.map((marker, key) => (
+          <LocationButton key={key}
+            moveMaptoLocation={this.moveMaptoLocation}
+            marker={marker}/>
+        ))}
         <MapView
           style={styles.container}
+          ref="map"
           mapType="terrain"   //standard, satellite, hybrid, terrain
           region={this.state.region}
           showsUserLocation={true}
@@ -89,6 +129,7 @@ export default class ReactMaps extends Component {
           
           {this.state.markers.map((marker, key) => (
             <MapView.Marker
+              draggable
               key={key}
               coordinate={marker.latLng}
               title={marker.title}
@@ -127,8 +168,9 @@ export default class ReactMaps extends Component {
             longitude: <Text style={styles.colorRed}>{this.state.region.longitude}{'\n'}</Text>
             latitudeDelta: <Text style={styles.colorRed}>{this.state.region.latitudeDelta}{'\n'}</Text>
             longitudeDelta: <Text style={styles.colorRed}>{this.state.region.longitudeDelta}{'\n'}</Text>
+            <Text style={styles.colorRed}>1 latitudeDelta => 110.57 km{'\n'}</Text>
+            <Text style={styles.colorRed}>1 longitudeDelta => 111.32 km{'\n'}</Text>
           </Text>
-          <Animatable.Text animation="pulse" easing="ease-out" iterationCount="infinite" style={{ textAlign: 'center', fontSize: 15, color: '#FF0' }}>Kowaii ❤❤❤❤️</Animatable.Text>
         </View>
       </View>
     );
@@ -154,11 +196,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   colorRed: {
-    color: 'rgba(255, 0, 0, 0.7)'
+    color: 'rgba(255, 255, 0, 0.7)'
+  },
+  button: {
+    borderRadius: 10,
+    padding: 10,
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    borderColor: '#000',
+    margin: 10
   },
   message: {
     position: 'absolute',
-    top: 0,
+    bottom: 0,
     left: 0,
     width: width,
     height: 100,
