@@ -75,16 +75,6 @@ class ButtonAddress extends Component {
       console.error(error);
     }
   }
-  async onPressFindAutocomplete() {
-    try {
-      let response = await fetch('https://maps.googleapis.com/maps/api/place/queryautocomplete/json?&types=geocode&key=AIzaSyAPQqDXR6mVZmUhh-4Q-xT31eTHlZy3264&input=' + this.props.text);
-      let responseJson = await response.json();
-      console.warn(JSON.stringify(responseJson));
-      this.setState({json: responseJson});
-    } catch(error) {
-      console.error(error);
-    }
-  }
 
   render() {
     const {json} = this.state;
@@ -93,18 +83,17 @@ class ButtonAddress extends Component {
       <View>
 
         {/*<Button title="Find" onPress={(json) => { this.onPressFind(json && this.state.json) }} />*/}
-        <Button title="Find" onPress={() => this.onPressFindAutocomplete()} />
+        <Button title="Find" onPress={() => this.onPressFind()} />
         {/*<Text>*/}
           {/*{json != '' ? console.warn(JSON.stringify(json.results)) : ''}*/}
         {/*</Text>*/}
-        {/*{json != '' && json.results.map((result, key) => (*/}
-        {/*<Text key={key}>*/}
-          {/*formatted_address: {result.formatted_address}{'\n'}*/}
-          {/*latitude: {result.geometry.location.lat}{'\n'}*/}
-          {/*longitude: {result.geometry.location.lng}{'\n'}*/}
-        {/*/!*Title: {movie.title}{'\n'}*!/*/}
-        {/*</Text>*/}
-        {/*))}*/}
+        {json != '' && json.results.map((result, key) => (
+        <Text key={key}>
+          latitude: {result.geometry.location.lat}{'\n'}
+          longitude: {result.geometry.location.lng}{'\n'}
+        {/*Title: {movie.title}{'\n'}*/}
+        </Text>
+        ))}
         {/*<Text>*/}
           {/*{console.warn(JSON.stringify(this.state.json))}*/}
         {/*</Text>*/}
