@@ -242,6 +242,10 @@ export default class ReactMaps extends Component {
   async componentDidMount () {
     await this.getMoviesFromApi();
   }
+  
+  funasd () {
+    
+  }
 
   render() {
     const { json } = this.state;
