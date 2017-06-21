@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.0.1_e885dee5d8292c1eff991de75713c6820a828939.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\okhttp-ws-3.4.1_1fe1b1d9352ed836aecf97f3d55f04db386ba185.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_4f2e942a0d1ef2411f69b4e6506ec8de8b153591.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.0.1_8298abaef1b10166f7a39a9bed00716e30b1b8d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.4.1_9db3f1e4da1186ee4204e8154f16217d568f8ed9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_3fa261ecd99897fbbacd3d99add75db2d6a6a80b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_f7743ed965eae3ae91cc33d9ced79ac994aa914b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.0.1_be6abd2b9f3804742c73b8b9402bf40b60190ef0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-10.2.4_f51355e6492817514b787200b9762f266b3d981d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_708907a29686f4494d4e6995bbd180283dc4ea9d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_8ace88c03f5ecdf8e2974baab6cf011759917046.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-10.2.4_39c412b70420868b6dac78720b376737577c5631.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_e967602cedb3cdf27c5916205188b8064fdde338.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.0.1_4c5d265105725f17dc8cca6fa74dcd8e048bb6df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-10.2.4_9f520a0776ca60e9bb4e33a94604aba6e8ba8da9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-10.2.4_a83a7faf2cb5fb315b60bf6d4bf67f8f08e8b4e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_5d0f9abb279094ba2cab570472a0390e46a32501.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\ReactMaps\react-native-maps\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cfe651e3dc0896e6e084eb8ab986e16aa0cf47c0">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\ReactMaps-react-native-maps-unspecified_1804fe92eb058f3764b70a76e9705e975e2f6bee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_7747d1b783e63b09257f5ff6c7cbac7c32692b0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_e7d52a1fa3d62fd3795a5ceab5dee21cce7ba14f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.0.1_a2450c150b875fac4bf83cf20eab523a1294d0f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_3a3ed28e08e17cfd74280d4f4729ed886de33500.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.44.2\jars\libs\infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\infer-annotations-1.5_ac68a8742cb56605f3d95945471bdcbda2636127.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.44.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.44.2_4325e3bd93a842e5aad077034c7e64612ca876f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\okio-1.9.0_87ec70002713aedce86d9826b500923c9d9dddcc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_2cb981e63e5bff5103b28333230c86d6a75440fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\react-native\ReactMaps\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="D:\react-native\ReactMaps\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.0.1_9acd5df2f3402f3fad5674e894259313c913a080.jar" />
+    </item>
+
+</items>
