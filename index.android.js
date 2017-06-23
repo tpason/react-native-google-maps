@@ -13,9 +13,11 @@ import {
   TouchableOpacity,
   Image,
   View,
+  Picker,
 } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import ButtonFind from './ButtonFind';
+import NearlyLocation from './NearlyLocation';
 import {debounce} from 'throttle-debounce';
 var {width} = Dimensions.get('window');
 export default class ReactMaps extends Component {
@@ -25,18 +27,20 @@ export default class ReactMaps extends Component {
       show: true,
       json: '',
       text: '',
+      type: 'address',
       latLng: '',
-      region : new MapView.AnimatedRegion({
+      region : {
         latitude: 10.865742,
         longitude: 106.8022934,
         latitudeDelta: 0.0122,
         longitudeDelta: 0.0121,
-      }),
+      },
       x: '',
     };
     this.onRegionChange = this.onRegionChange.bind(this);
     this.findAutocomplete = debounce(500, this.findAutocomplete.bind(this));
     this.onPressFindPlaceId = this.onPressFindPlaceId.bind(this);
+    this.selectType = this.selectType.bind(this);
   }
   onRegionChange(region) {
     this.setState({region})
@@ -58,10 +62,11 @@ export default class ReactMaps extends Component {
       let responseJson = await response.json();
       this.setState({addr: responseJson});
       const {addr} = this.state;
-      this.setState({
+      addr && this.setState({
         latLng: {
           latitude: addr.result.geometry.location.lat,
           longitude: addr.result.geometry.location.lng},
+        location: addr.result.geometry.location.lat+','+addr.result.geometry.location.lng,
         image: addr.result.icon,
         photos: addr.result.photos,
         title: addr.result.formatted_address,
@@ -70,11 +75,21 @@ export default class ReactMaps extends Component {
         names: addr.result.name,
       });
       addr && this.setState({show: false});
+      // addr && console.warn(JSON.stringify(this.state.photos));
       this.refs.map.animateToRegion({
-        latitudeDelta: 0.0022,
-        longitudeDelta: 0.0022,
+        latitudeDelta: 0.0052,
+        longitudeDelta: 0.0052,
         ...this.state.latLng,
-      }, 2000);
+      }, 5000);
+    } catch(error) {
+      console.error(error);
+    }
+  }
+  async selectType(type, location) {
+    try {
+      let response = await fetch('https://maps.googleapis.com/maps/api/place/radarsearch/json?&radius=5000&key=AIzaSyDSjdOEeRiP-P9egmnNyRJsHxCiC2h21qc&placeid=ChIJd-F-9hasNTERd_YLTMfIL0Q&type=' + type + '&location='+location);
+      let responseJson = await response.json();
+      this.setState({nearlyLocation: responseJson});
     } catch(error) {
       console.error(error);
     }
@@ -84,13 +99,14 @@ export default class ReactMaps extends Component {
     return (
       <View
         style={styles.container}>
-        <MapView.Animated
+        <MapView
           style={styles.container}
           ref="map"
           mapType="terrain"   //standard, satellite, hybrid, terrain
           region={this.state.region}
           showsUserLocation={true}
           followsUserLocation={true}
+          liteMode={true}
           showsCompass={true}
           showsPointsOfInterest={true}
           onRegionChange={this.onRegionChange}
@@ -118,11 +134,11 @@ export default class ReactMaps extends Component {
               description={this.state.description}
             >
               <View style={styles.pin}>
-                {/*<Text style={styles.pinText}>*/}
-                  {/*{this.state.title}*/}
-                {/*</Text>*/}
+                <Text style={styles.pinText}>
+                  {this.state.title}
+                </Text>
                 <Image style={styles.pinImage}
-                  source={{uri: this.state.image ? this.state.image : 'http://www.myiconfinder.com/uploads/iconsets/256-256-a5485b563efc4511e0cd8bd04ad0fe9e.png'}}
+                  source={{uri: 'https://i.stack.imgur.com/NgrnX.png'}}
                 />
               </View>
               <MapView.Callout>
@@ -147,7 +163,7 @@ export default class ReactMaps extends Component {
             </MapView.Marker.Animated >
           </View>}
             
-        </MapView.Animated>
+        </MapView>
         <ButtonFind findAutocomplete={this.findAutocomplete} />
         <View>
             {this.state.show && json != '' && json.predictions.map((address, key) => (
@@ -159,6 +175,30 @@ export default class ReactMaps extends Component {
                   </TouchableOpacity>
                 </View>
               ))}
+
+          {!this.state.show &&
+            <Picker
+              selectedValue={this.state.type}
+              onValueChange={(itemValue, itemIndex) => this.selectType(itemValue, this.state.location)}>
+              <Picker.Item label="Airport" value="airport" />
+              <Picker.Item label="ATM" value="atm" />
+              <Picker.Item label="Bakery" value="bakery" />
+              <Picker.Item label="Bank" value="bank" />
+              <Picker.Item label="Bus station" value="bus_station" />
+              <Picker.Item label="Cafe" value="cafe" />
+              <Picker.Item label="Parking" value="parking" />
+              <Picker.Item label="Food" value="food" />
+              <Picker.Item label="GYM" value="gym" />
+              <Picker.Item label="Hair care" value="hair_care" />
+              <Picker.Item label="Zoo" value="zoo" />
+              <Picker.Item label="University" value="university" />
+              <Picker.Item label="Address" value="address" />
+            </Picker>
+          }
+          
+          {this.state.nearlyLocation &&
+            <NearlyLocation nearlyLocation={this.state.nearlyLocation} />            
+          }
         </View>
         
       </View>
@@ -199,7 +239,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   pinText: {
-    color: '#000000'
+    color: '#FF397A'
   },
   callout: {
     flex: 1,
@@ -207,6 +247,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     marginRight: 10,
     marginBottom: 10,
+    width: width
   },
   animatedText: {
     textAlign: "center",
